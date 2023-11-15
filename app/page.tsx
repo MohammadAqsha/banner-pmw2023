@@ -1,21 +1,22 @@
 'use client'
 
-import { useState } from 'react'
+import { SetStateAction, useState } from 'react'
 import Image from 'next/image'
 import './globals.css'
 
 export default function Home() {
 
-  const [corps, setCorps] = useState(0)
   const [nama, setNama] = useState('Mohammad Aqsha Arianto Latif')
-
-  function handlerTambahCorps(){
-    setCorps(corps + 1)
+  const [Setnama, setValue] = useState("");
+  
+  function simpanValue(event: { target: { value: SetStateAction<string> } }) {
+    setValue(event.target.value);
   }
 
-  function handlerGantiNama(){
-    setNama('Founding Titan')
+  function handlerGantiNama() {
+    setNama(Setnama);
   }
+  
   
   
   return (
@@ -39,15 +40,13 @@ export default function Home() {
             <div className="bio-nim-header-banner">
             {/* NIM dan BIO*/}
             <p>D121211018</p>
-            <p>Survey Corps {corps}, Shinzou Sasageyo</p>
+            <p>Survey Corps, Shinzou Sasageyo</p>
             </div>
           </div>
         </div>
         <div className="cta-banner-wrapper">
           {/* Tombol CTA */}
-            <div className='cta-button' onClick={handlerTambahCorps}>
-              <p>Attack!!!</p>
-            </div>
+          <input className="text-area" type="text" value={Setnama} onChange={simpanValue}/>
             <div className='cta-button' 
             style={{
               marginTop: '12px'
