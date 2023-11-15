@@ -8,7 +8,6 @@
 
 /* Pilih Font */
 h1, p{
-  color: #1E1E1E;
   font-family: Plus Jakarta Sans;
 }
 
@@ -87,9 +86,10 @@ p{
   align-items: center;
   gap: 10px;
   align-self: stretch;
+  color: white;
 
   border-radius: 12px;
-  background: #EFCA08;
+  background: #1A2E83;
 
 }
 .cta-button p{

@@ -46,7 +46,7 @@ export default function Home() {
         <div className="cta-banner-wrapper">
           {/* Tombol CTA */}
             <div className='cta-button' onClick={handlerTambahCorps}>
-              <p>Halo!</p>
+              <p>Attack!!!</p>
             </div>
             <div className='cta-button' 
             style={{
@@ -54,7 +54,7 @@ export default function Home() {
             }}
             
             onClick={handlerGantiNama}>
-              <p>Ganti Nama</p>
+              <p>Changed</p>
             </div>
         </div>
       </div>
